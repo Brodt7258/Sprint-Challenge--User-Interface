@@ -167,11 +167,29 @@ header nav div a {
     margin: 20px 0;
 }
 
+.about-content {
+    padding: 0 20px 20px 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed black;
+}
+
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.about-box {
+    width: 48%;
+    border-bottom: 1px dashed black;
+    padding: 1%;
+}
 
 
 
 
-/* ~Box Stuffs~ */
+
+/* ~Index Box Stuffs~ */
 
 .middle-content .boxes .box-1 {
     background: teal;
