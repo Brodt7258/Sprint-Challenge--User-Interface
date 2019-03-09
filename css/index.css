@@ -167,42 +167,42 @@ header nav div a {
     margin: 20px 0;
 }
 
-.box1 {
+.middle-content .boxes .box-1 {
     background: teal;
 }
 
-.box2 {
+.middle-content .boxes .box-2 {
     background: gold;
 }
 
-.box3 {
+.middle-content .boxes .box-3 {
     background: cadetblue;
 }
 
-.box4 {
+.middle-content .boxes .box-4 {
     background: coral;
 }
 
-.box5 {
+.middle-content .boxes .box-5 {
     background: crimson;
 }
 
-.box6 {
+.middle-content .boxes .box-6 {
     background: forestgreen;
 }
 
-.box7 {
+.middle-content .boxes .box-7 {
     background: darkorchid;
 }
 
-.box8 {
+.middle-content .boxes .box-8 {
     background: hotpink;
 }
 
-.box9 {
+.middle-content .boxes .box-9 {
     background: indigo;
 }
 
-.box10 {
+.middle-content .boxes .box-10 {
     background: dodgerblue;
 }
