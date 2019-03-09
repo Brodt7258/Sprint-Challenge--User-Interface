@@ -204,6 +204,25 @@ header nav div a {
 }
 
 
+/*  Is is a good animation?  No.  I kind of hate it.
+    Needs a lot of work.  But it is an animation */
+
+.container {
+    animation: 1s ease-out 0s 1 slide-fade;
+}
+
+@keyframes slide-fade {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+  }
+
+
 
 
 
