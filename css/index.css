@@ -73,7 +73,6 @@ p {
 
 .top-content {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly;
     margin-bottom: 20px;
     border-bottom: 1px dashed black;
@@ -82,7 +81,7 @@ p {
 .top-content .text-container {
     width: 48%;
     padding: 0 1%;
-    padding-bottom: 20px;  
+    padding-bottom: 20px;
 }
 
 .middle-content {
@@ -102,7 +101,7 @@ p {
 }
 
 .middle-content .boxes .box {
-    width: 12.5%;
+    width: 100px;
     height: 100px;
     background: black;
     margin: 20px 2.5%;
@@ -175,8 +174,13 @@ header nav div a:hover {
     color: tomato;
 }
 
-.jumbo-img {
-    margin: 20px 0;
+.banner {
+    margin: 20px auto;
+    text-align: center;
+    overflow: hidden;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .full-content {
@@ -222,8 +226,41 @@ header nav div a:hover {
     color: tomato;
 }
 
+/*  ~Responsive Stuffs~  */
 
-/*  Is is a good animation?  No.  I kind of hate it.
+@media(max-width: 500px) {
+    .container {
+        width: 100%;
+    }
+
+    .top-content {
+        flex-direction: column;
+    }
+
+    .top-content .text-container {
+        width: 98%;
+        padding: 0 4%;
+        padding-bottom: 20px;
+    }
+
+    .bottom-content {
+        flex-direction: column;
+        padding: 4%;
+    }
+
+    .bottom-content .text-container {
+        padding: 0;
+        margin: 10px 0;
+    }
+
+    footer nav {
+        width: 100%;
+        padding: 25px 10%;
+    }
+}
+
+
+/*  Is it a good animation?  No.  I kind of hate it.
     Needs a lot of work.  But it is *an* animation */
 
 .container {
