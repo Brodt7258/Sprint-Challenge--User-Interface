@@ -143,6 +143,12 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+
+    transition-duration: 0.35s;
+}
+
+footer nav a:hover {
+    color: tomato;
 }
 
 header nav {
@@ -201,6 +207,7 @@ header nav div a {
     font-size: 12pt;
     padding: 10px 23px;
     margin: 10px 0;
+
     transition-duration: 0.35s;
 }
 
