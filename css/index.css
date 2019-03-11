@@ -218,8 +218,8 @@ header nav div a:hover {
 }
 
 .about-box button:hover {
-    background: grey;
-    color: darkred;
+    background: #555;
+    color: tomato;
 }
 
 
