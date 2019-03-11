@@ -201,11 +201,17 @@ header nav div a {
     font-size: 12pt;
     padding: 10px 23px;
     margin: 10px 0;
+    transition-duration: 0.35s;
+}
+
+.about-box button:hover {
+    background: grey;
+    color: darkred;
 }
 
 
 /*  Is is a good animation?  No.  I kind of hate it.
-    Needs a lot of work.  But it is an animation */
+    Needs a lot of work.  But it is *an* animation */
 
 .container {
     animation: 1s ease-out 0s 1 slide-fade;
