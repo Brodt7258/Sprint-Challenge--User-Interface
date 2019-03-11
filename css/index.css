@@ -166,7 +166,13 @@ header nav div {
 header nav div a {
     text-decoration: none;
     color: black;
-    font-size: 10pt; 
+    font-size: 10pt;
+
+    transition-duration: 0.35s;
+}
+
+header nav div a:hover {
+    color: tomato;
 }
 
 .jumbo-img {
