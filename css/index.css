@@ -415,6 +415,11 @@ header nav div a:hover {
     .about-box img {
         width: 100%;
     }
+
+    .full-content {
+        width: 80%;
+        margin: 20px auto;
+    }
 }
 
 /*  Is it a good animation?  No.  I kind of hate it.
