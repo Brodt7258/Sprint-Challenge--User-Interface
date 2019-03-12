@@ -402,6 +402,19 @@ header nav div a:hover {
         margin-top: 0;
     }
     
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-box {
+        width: 80%;
+        margin: 10px 0 20px 0;
+    }
+
+    .about-box img {
+        width: 100%;
+    }
 }
 
 /*  Is it a good animation?  No.  I kind of hate it.
