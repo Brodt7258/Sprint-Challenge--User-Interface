@@ -73,7 +73,6 @@ p {
 
 .top-content {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly;
     margin-bottom: 20px;
     border-bottom: 1px dashed black;
@@ -82,7 +81,7 @@ p {
 .top-content .text-container {
     width: 48%;
     padding: 0 1%;
-    padding-bottom: 20px;  
+    padding-bottom: 20px;
 }
 
 .middle-content {
@@ -102,7 +101,7 @@ p {
 }
 
 .middle-content .boxes .box {
-    width: 12.5%;
+    width: 100px;
     height: 100px;
     background: black;
     margin: 20px 2.5%;
@@ -143,4 +142,348 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+
+    transition-duration: 0.35s;
+}
+
+footer nav a:hover {
+    color: tomato;
+}
+
+header nav {
+    padding: 20px 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+header nav div {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+}
+
+header nav div a {
+    text-decoration: none;
+    color: black;
+    font-size: 10pt;
+
+    transition-duration: 0.35s;
+}
+
+header nav div a:hover {
+    color: tomato;
+}
+
+.banner {
+    margin: 20px auto;
+    text-align: center;
+    overflow: hidden;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.full-content {
+    padding: 0 20px 20px 20px;
+    margin-bottom: 20px;
+    
+}
+
+.full-content.top {
+    border-bottom: 1px dashed black;
+}
+
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.about-box {
+    width: 46%;
+    border-bottom: 1px dashed black;
+    padding-bottom: 10px;
+    margin: 10px 0 50px 0;
+}
+
+.about-box .box-text {
+    margin: 10px 0;
+}
+
+.about-box button {
+    background: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 12pt;
+    padding: 10px 23px;
+    margin: 10px 0;
+
+    transition-duration: 0.35s;
+}
+
+.about-box button:hover {
+    background: #555;
+    color: tomato;
+}
+
+.dummy {
+    display: none;
+}
+
+/* ~Improvised Hamburger Menu Witchcraft~ */
+/* Based (very) heavily on https://codepen.io/erikterwan/pen/EVzeRP?editors=1100 */
+
+#menuToggle {
+    display: none;
+    position: relative;
+    z-index: 1;
+
+    margin-left: 5%;
+    
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    
+    cursor: pointer;
+    
+    opacity: 0;
+    z-index: 2;
+    
+    -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    
+    background: #cdcdcd;
+    border-radius: 3px;
+    
+    z-index: 1;
+    
+    transform-origin: 4px 0px;
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(1px, 0);
+}
+
+/*
+* Make this absolute positioned
+* at the top left of the screen
+*/
+#menu {
+    position: absolute;
+    width: 500px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    
+    transform-origin: 0% 0%;
+    transform: translate(0, -100%);
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+/*
+* And let's slide it in from the left
+*/
+#menuToggle input:checked ~ ul {
+    transform: none;
+}
+
+/*  ~Responsive Stuffs~  */
+
+@media(max-width: 500px) {
+    .container {
+        width: 100%;
+    }
+
+    .top-content {
+        flex-direction: column;
+    }
+
+    .top-content .text-container {
+        width: 98%;
+        padding: 0 4%;
+        padding-bottom: 20px;
+    }
+
+    .bottom-content {
+        flex-direction: column;
+        padding: 4%;
+    }
+
+    .bottom-content .text-container {
+        padding: 0;
+        margin: 10px 0;
+    }
+
+    footer nav {
+        width: 100%;
+        padding: 25px 10%;
+    }
+
+    header nav {
+        align-items: center;
+    }
+
+    header nav .links {
+        display: none;
+    }
+
+    .dummy {
+        display: block;
+        flex: 1;
+    }
+
+    #menuToggle {
+        display: block;
+        flex: 1;
+    }
+
+    #menuToggle span {
+        background: tomato;
+    }
+
+    header {
+        margin-top: 0px;
+        position: fixed;
+        width: 100%;
+        background: lightgray;
+    }
+
+    .banner {
+        padding-top: 80px;
+        margin-top: 0;
+    }
+    
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-box {
+        width: 80%;
+        margin: 10px 0 20px 0;
+    }
+
+    .about-box img {
+        width: 100%;
+    }
+
+    .full-content {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 20px;
+        padding: 0 0 20px 0;
+    }
+}
+
+/*  Is it a good animation?  No.  I kind of hate it.
+    Needs a lot of work.  But it is *an* animation */
+
+.container {
+    animation: 1s ease-out 0s 1 slide-fade;
+}
+
+@keyframes slide-fade {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+  }
+
+
+
+
+
+/* ~Index Box Stuffs~ */
+
+.middle-content .boxes .box-1 {
+    background: teal;
+}
+
+.middle-content .boxes .box-2 {
+    background: gold;
+}
+
+.middle-content .boxes .box-3 {
+    background: cadetblue;
+}
+
+.middle-content .boxes .box-4 {
+    background: coral;
+}
+
+.middle-content .boxes .box-5 {
+    background: crimson;
+}
+
+.middle-content .boxes .box-6 {
+    background: forestgreen;
+}
+
+.middle-content .boxes .box-7 {
+    background: darkorchid;
+}
+
+.middle-content .boxes .box-8 {
+    background: hotpink;
+}
+
+.middle-content .boxes .box-9 {
+    background: indigo;
+}
+
+.middle-content .boxes .box-10 {
+    background: dodgerblue;
 }
